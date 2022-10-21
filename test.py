@@ -17,7 +17,7 @@ while (True):
     else:
         False'''
 
-import re
+'''import re
 while True:
     a_string = input("gir")
     sonuc = []
@@ -39,6 +39,18 @@ while True:
                 sonuc.append(intlist[i])
                 sonuc.append(intlist[i+1])
             print(sonuc)
+            '''
+test = [4, 5, 4, 7, 3 ]
+test1 = []
+
+for i in range(len(test)):
+    if test[i] % 2 != 0:
+            test1.append(test[i])
+            test1.append("-")
+    else:
+        test1.append(test[i])
+else:
+    print(test1)
 
 
 
