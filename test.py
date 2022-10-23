@@ -40,6 +40,7 @@ while True:
                 sonuc.append(intlist[i+1])
             print(sonuc)
             '''
+'''
 test = [4, 5, 4, 7, 3 ]
 test1 = []
 
@@ -51,6 +52,30 @@ for i in range(len(test)):
         test1.append(test[i])
 else:
     print(test1)
+    '''
+test = [4, 5, 4, 7, 9, 2]
+test1 = []
+x = len(test)
+
+for i in range(len(test)):
+    n = i + 1
+    while i == x:
+        break
+    else:
+        if test[i] % 2 != 0:
+            if test[n] % 2 != 0:
+                test1.append(test[i])
+                test1.append("-")
+            else:
+                test1.append(test[i])
+
+
+        else:
+            test1.append(test[i])
+else:
+    print(test1)
+
+print(test1)
 
 
 
