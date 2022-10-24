@@ -6,27 +6,21 @@ list_len = len(input_list)
 
 for i in range(len(input_list)):
     n = i + 1
-    while i == list_len:
+    if i == ((list_len)-1):
         break
     else:
         if input_list[i] % 2 != 0:
-            while n == list_len:
+            if n == ((list_len)-1):
                 break
             else:
                 if input_list[n] % 2 != 0:
                     output_list.append(input_list[i])
                     output_list.append("-")
-                else:
-                    output_list.append(input_list[i])
         else:
             output_list.append(input_list[i])
-else:
-    True
+
 
 
 output_string = ''.join(map(str, output_list))
 
 print(output_string)
-
-
-
