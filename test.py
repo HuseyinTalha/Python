@@ -6,18 +6,19 @@ list_len = len(input_list)
 
 for i in range(len(input_list)):
     n = i + 1
-    if i == ((list_len)-1):
+    if i == (list_len):
         break
-    else:
-        if input_list[i] % 2 != 0:
-            if n == ((list_len)-1):
-                break
-            else:
-                if input_list[n] % 2 != 0:
-                    output_list.append(input_list[i])
-                    output_list.append("-")
+    if input_list[i] % 2 != 0:
+        if n == (list_len):
+            output_list.append(input_list[i])
+            break
+        if input_list[n] % 2 != 0:
+            output_list.append(input_list[i])
+            output_list.append("-")
         else:
             output_list.append(input_list[i])
+    else:
+        output_list.append(input_list[i])
 
 
 
