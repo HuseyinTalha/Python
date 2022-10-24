@@ -1,85 +1,32 @@
-'''import re
+input_string = (input("Enter"))
+input_int = int(input_string)
+input_list = [int(x) for a, x in enumerate(str(input_int))]
+output_list = []
+list_len = len(input_list)
 
-while (True):
-    a_string = input("gir")
-
-    if not (re.findall(r'[a-zA-Z]', a_string)):
-        a_list = [x for x in a_string]
-        mapobject = map(int, a_list)
-        intlist = list(mapobject)
-        for a, b in enumerate(intlist):
-            continue
-        else:
-            print(intlist, a)
-            print(type(a))
-
-
-    else:
-        False'''
-
-'''import re
-while True:
-    a_string = input("gir")
-    sonuc = []
-
-
-    if not (re.findall(r'[a-zA-Z]', a_string)):
-        a_list = [x for x in a_string]
-        mapobject = map(int, a_list)
-        intlist = list(mapobject)
-        for i in range(len(intlist)):
-            if intlist[i] % 2 != 0:
-                if intlist[i+1] % 2 != 0:
-                    sonuc.append(intlist[i])
-                    sonuc.append("-")
-                    sonuc.append(intlist[i+1])
-
-
-            elif intlist[i] % 2 ==0 or intlist[i+1] % 2 !=0:
-                sonuc.append(intlist[i])
-                sonuc.append(intlist[i+1])
-            print(sonuc)
-            '''
-'''
-test = [4, 5, 4, 7, 3 ]
-test1 = []
-
-for i in range(len(test)):
-    if test[i] % 2 != 0:
-            test1.append(test[i])
-            test1.append("-")
-    else:
-        test1.append(test[i])
-else:
-    print(test1)
-    '''
-test = [4, 5, 4, 7, 9, 2]
-test1 = []
-x = len(test)
-
-for i in range(len(test)):
+for i in range(len(input_list)):
     n = i + 1
-    while i == x:
+    while i == list_len:
         break
     else:
-        if test[i] % 2 != 0:
-            if test[n] % 2 != 0:
-                test1.append(test[i])
-                test1.append("-")
+        if input_list[i] % 2 != 0:
+            while n == list_len:
+                break
             else:
-                test1.append(test[i])
-
-
+                if input_list[n] % 2 != 0:
+                    output_list.append(input_list[i])
+                    output_list.append("-")
+                else:
+                    output_list.append(input_list[i])
         else:
-            test1.append(test[i])
+            output_list.append(input_list[i])
 else:
-    print(test1)
-
-print(test1)
+    True
 
 
+output_string = ''.join(map(str, output_list))
 
-
+print(output_string)
 
 
 
